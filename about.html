@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Layout</title>
+<title>Kore Travels Booking - About Us</title>
 <style>
 *{
     margin:0;
@@ -13,7 +13,7 @@
 body{
     font-family:Arial, sans-serif;
     padding:10px;
-    background-color: pink;
+    background-color: #EEF3FA;
 }
 .container{
     width:100%;
@@ -23,22 +23,32 @@ body{
     display:flex;
    justify-content:space-between;
     align-items:center;
-      padding:15px;
+      
     border-bottom:2px solid #000;
+     background-color:  #EEF3FA;
+     border-bottom: solid 25px #1B4F8A;
+     
 }
 .logo{
-    width:60px;
-    height:60px;
-    background:#ddd;
-    text-align:center;
-    line-height:60px;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  align-items: center;
 }
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .menu{
     width:600px;
     height:40px;
-    background:#ddd;
+    
     text-align:center;
     line-height:40px;
+    
 }
 .menu li{
     display:inline-block;
@@ -46,21 +56,28 @@ body{
 }
 .menu a{
     text-decoration:none;
-    color:#aa2222;
+    color:#1B4F8A;
+
     font-weight:bold; 
     font-size: 20px;  
 }
 .menu a:hover{
-    color:orange;  
+    color:#FFAD42;  
 }
-.banner{
-    height: 350px;
-     border-bottom:2px solid #000;
-     display:flex;
-     justify-content:center;
-    align-items:center;
-    font-size:24px;
+.banner {
+  width: 100%;
+  min-height: 600px;
+  background: #EEF3FA;
+  overflow: hidden;
+  border-bottom:solid 10px #1B4F8A;
 }
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .content{
     display:flex;
     padding:20px;
@@ -69,24 +86,49 @@ body{
 }
 .left{
     width:30%;
-    background-color: aquamarine;
 }
 .small-box{
-    height:120px;
+    height:220px;
      border:2px solid #000;
      margin-bottom:20px;
     display:flex;
+    flex-direction:column;
      justify-content:center;
     align-items:center;
+    overflow:hidden;
+}
+.small-box img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+.small-box h4{
+    padding:8px;
+    color:#1B4F8A;
+    font-size:15px;
 }
 .right{
     width:70%;
     border:2px solid #000;
     min-height:260px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color: burlywood;
+    padding:20px;
+}
+.right h2{
+    color:#1B4F8A;
+    margin-bottom:10px;
+}
+.right p{
+    font-size:15px;
+    color:#444;
+    line-height:1.7;
+    margin-bottom:8px;
+}
+.right img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    margin-top:10px;
+    border:2px solid #000;
 }
 .footer-boxes{
     display:flex;
@@ -96,16 +138,28 @@ body{
 }
 .footer-box{
     width:22%;
-    height:120px;
     border:2px solid #000;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    background-color: chocolate;
+    padding:15px 10px;
+    text-align:center;
+}
+.footer-box h4{
+    color:#1B4F8A;
+    font-size:15px;
+    margin-bottom:5px;
+}
+.footer-box p{
+    font-size:13px;
+    color:#555;
 }
 .copyright{
     text-align:center;
     padding:15px;
+    background-color:#1B4F8A;
+    color:#fff;
 }
 
 @media(max-width:768px){
@@ -135,12 +189,9 @@ body{
     }
     .footer-box{
         width:100%;
-        background: brown;
     }
     .banner{
-        height:120px;
-        font-size:18px;
-                background-color: blueviolet;
+        min-height:200px;
     }
 }
 </style>
@@ -148,41 +199,64 @@ body{
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">Logo</div>
+            <div class="logo"><img src="final logo.png" alt="Kore Travels Logo"></div>
+            <div class="name"><h1 style="color: #1B4F8A;">KORE TRAVELS BOOKING</h1></div>
             <div class="menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             </div>
         </div>
         <div class="banner">
-            Banner Section
+           <img src="bus.png" alt="Kore Travels Bus on Highway">
         </div>
 
         <div class="content">
             <div class="left">
-                <div class="small-box">Box 1</div>
-                <div class="small-box">Box 2</div>
+                <div class="small-box">
+                    <img src="services.png" alt="Our Services">
+                    <h4>Our Services</h4>
+                </div>
+                <div class="small-box">
+                    <img src="support.png" alt="24/7 Support">
+                    <h4>24/7 Support</h4>
+                </div>
             </div>
             <div class="right">
-                Main Content Area
+                <h2>About Kore Travels Booking</h2>
+                <p>Kore Travels Booking is a trusted travel company dedicated to providing comfortable, safe, and affordable bus travel experiences across Maharashtra, Goa, and neighboring states.</p>
+                <p>Founded with a vision to make travel easy and enjoyable for families, groups, and solo travelers, we take pride in our well-maintained fleet of luxury and semi-luxury buses.</p>
+                <p>Our experienced team ensures that every journey with us is a memorable one — from the moment you book until you reach your destination.</p>
+                <img src="family banner.png" alt="Happy Family Travelling">
             </div>
         </div>
 
         <div class="footer-boxes">
-            <div class="footer-box">1</div>
-            <div class="footer-box">2</div>
-            <div class="footer-box">3</div>
-            <div class="footer-box">4</div>
+            <div class="footer-box">
+                <h4>🚌 Modern Fleet</h4>
+                <p>Well-maintained, clean buses with AC and comfort</p>
+            </div>
+            <div class="footer-box">
+                <h4>👨‍👩‍👧‍👦 Family Friendly</h4>
+                <p>Safe travel for families with kids</p>
+            </div>
+            <div class="footer-box">
+                <h4>💰 Best Prices</h4>
+                <p>Affordable rates with seasonal offers</p>
+            </div>
+            <div class="footer-box">
+                <h4>📞 24/7 Support</h4>
+                <p>Round the clock customer care</p>
+            </div>
         </div>
 
         <div class="copyright">
-            © 2026 Your Website Name
+            &copy; 2026 Kore Travels Booking. All Rights Reserved.
         </div>
 
     </div>
 </body>
-</html> 
+</html>

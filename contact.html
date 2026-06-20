@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Layout</title>
+<title>Kore Travels Booking - Contact Us</title>
 <style>
 *{
     margin:0;
@@ -13,7 +13,7 @@
 body{
     font-family:Arial, sans-serif;
     padding:10px;
-    background-color: pink;
+    background-color: #EEF3FA;
 }
 .container{
     width:100%;
@@ -23,22 +23,32 @@ body{
     display:flex;
    justify-content:space-between;
     align-items:center;
-      padding:15px;
+      
     border-bottom:2px solid #000;
+     background-color:  #EEF3FA;
+     border-bottom: solid 25px #1B4F8A;
+     
 }
 .logo{
-    width:60px;
-    height:60px;
-    background:#ddd;
-    text-align:center;
-    line-height:60px;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  align-items: center;
 }
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .menu{
     width:600px;
     height:40px;
-    background:#ddd;
+    
     text-align:center;
     line-height:40px;
+    
 }
 .menu li{
     display:inline-block;
@@ -46,21 +56,28 @@ body{
 }
 .menu a{
     text-decoration:none;
-    color:#aa2222;
+    color:#1B4F8A;
+
     font-weight:bold; 
     font-size: 20px;  
 }
 .menu a:hover{
-    color:orange;  
+    color:#FFAD42;  
 }
-.banner{
-    height: 350px;
-     border-bottom:2px solid #000;
-     display:flex;
-     justify-content:center;
-    align-items:center;
-    font-size:24px;
+.banner {
+  width: 100%;
+  min-height: 600px;
+  background: #EEF3FA;
+  overflow: hidden;
+  border-bottom:solid 10px #1B4F8A;
 }
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .content{
     display:flex;
     padding:20px;
@@ -69,24 +86,74 @@ body{
 }
 .left{
     width:30%;
-    background-color: aquamarine;
 }
 .small-box{
-    height:120px;
+    height:220px;
      border:2px solid #000;
      margin-bottom:20px;
     display:flex;
+    flex-direction:column;
      justify-content:center;
     align-items:center;
+    overflow:hidden;
+    padding:15px 10px;
+    text-align:center;
+}
+.small-box h4{
+    color:#1B4F8A;
+    font-size:15px;
+    margin-bottom:5px;
+}
+.small-box p{
+    font-size:13px;
+    color:#555;
+    line-height:1.5;
 }
 .right{
     width:70%;
     border:2px solid #000;
     min-height:260px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color: burlywood;
+    padding:20px;
+}
+.right h2{
+    color:#1B4F8A;
+    margin-bottom:15px;
+}
+.right label{
+    display:block;
+    color:#1B4F8A;
+    font-weight:bold;
+    margin-bottom:5px;
+    margin-top:12px;
+    font-size:14px;
+}
+.right input,
+.right textarea{
+    width:100%;
+    padding:8px 10px;
+    border:2px solid #000;
+    font-size:14px;
+    font-family:Arial, sans-serif;
+}
+.right textarea{
+    height:100px;
+    resize:vertical;
+}
+.right button{
+    display:block;
+    width:100%;
+    margin-top:15px;
+    padding:10px;
+    background-color:#1B4F8A;
+    color:#fff;
+    border:2px solid #000;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.right button:hover{
+    background-color:#FFAD42;
+    color:#1B4F8A;
 }
 .footer-boxes{
     display:flex;
@@ -99,13 +166,26 @@ body{
     height:120px;
     border:2px solid #000;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    background-color: chocolate;
+    text-align:center;
+    padding:10px;
+}
+.footer-box h4{
+    color:#1B4F8A;
+    font-size:14px;
+    margin-bottom:5px;
+}
+.footer-box p{
+    font-size:12px;
+    color:#555;
 }
 .copyright{
     text-align:center;
     padding:15px;
+    background-color:#1B4F8A;
+    color:#fff;
 }
 
 @media(max-width:768px){
@@ -135,12 +215,9 @@ body{
     }
     .footer-box{
         width:100%;
-        background: brown;
     }
     .banner{
-        height:120px;
-        font-size:18px;
-                background-color: blueviolet;
+        min-height:200px;
     }
 }
 </style>
@@ -148,41 +225,85 @@ body{
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">Logo</div>
+            <div class="logo"><img src="final logo.png" alt="Kore Travels Logo"></div>
+            <div class="name"><h1 style="color: #1B4F8A;">KORE TRAVELS BOOKING</h1></div>
             <div class="menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             </div>
         </div>
         <div class="banner">
-            Banner Section
+           <img src="support.png" alt="24/7 Customer Support">
         </div>
 
         <div class="content">
             <div class="left">
-                <div class="small-box">Box 1</div>
-                <div class="small-box">Box 2</div>
+                <div class="small-box">
+                    <h4>📞 Phone</h4>
+                    <p>+91 98765 43210</p>
+                    <p>+91 87654 32109</p>
+                </div>
+                <div class="small-box">
+                    <h4>📧 Email</h4>
+                    <p>info@koretravels.com</p>
+                    <p>bookings@koretravels.com</p>
+                </div>
+                <div class="small-box">
+                    <h4>📍 Address</h4>
+                    <p>Kore Travels Booking</p>
+                    <p>Pune, Maharashtra, India</p>
+                </div>
             </div>
             <div class="right">
-                Main Content Area
+                <h2>Send Us a Message</h2>
+                <form>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name">
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="e.g. Bus Booking Inquiry">
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </div>
 
         <div class="footer-boxes">
-            <div class="footer-box">1</div>
-            <div class="footer-box">2</div>
-            <div class="footer-box">3</div>
-            <div class="footer-box">4</div>
+            <div class="footer-box">
+                <h4>🚌 Bus Booking</h4>
+                <p>Call us to book</p>
+            </div>
+            <div class="footer-box">
+                <h4>🏖️ Tour Packages</h4>
+                <p>Goa, Mumbai & more</p>
+            </div>
+            <div class="footer-box">
+                <h4>👨‍👩‍👧‍👦 Family Trips</h4>
+                <p>Safe family travel</p>
+            </div>
+            <div class="footer-box">
+                <h4>📞 24/7 Support</h4>
+                <p>Always here to help</p>
+            </div>
         </div>
 
         <div class="copyright">
-            © 2026 Your Website Name
+            &copy; 2026 Kore Travels Booking. All Rights Reserved.
         </div>
 
     </div>
 </body>
-</html> 
+</html>
