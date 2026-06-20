@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Layout</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, sans-serif;
+    padding:10px;
+    background-color: pink;
+}
+.container{
+    width:100%;
+    border:2px solid #000;
+}
+.header{
+    display:flex;
+   justify-content:space-between;
+    align-items:center;
+      padding:15px;
+    border-bottom:2px solid #000;
+}
+.logo{
+    width:60px;
+    height:60px;
+    background:#ddd;
+    text-align:center;
+    line-height:60px;
+}
+.menu{
+    width:600px;
+    height:40px;
+    background:#ddd;
+    text-align:center;
+    line-height:40px;
+}
+.menu li{
+    display:inline-block;
+    margin-left:20px;
+}
+.menu a{
+    text-decoration:none;
+    color:#aa2222;
+    font-weight:bold; 
+    font-size: 20px;  
+}
+.menu a:hover{
+    color:orange;  
+}
+.banner{
+    height: 350px;
+     border-bottom:2px solid #000;
+     display:flex;
+     justify-content:center;
+    align-items:center;
+    font-size:24px;
+}
+.content{
+    display:flex;
+    padding:20px;
+    gap:20px;
+    border-bottom:2px solid #000;
+}
+.left{
+    width:30%;
+    background-color: aquamarine;
+}
+.small-box{
+    height:120px;
+     border:2px solid #000;
+     margin-bottom:20px;
+    display:flex;
+     justify-content:center;
+    align-items:center;
+}
+.right{
+    width:70%;
+    border:2px solid #000;
+    min-height:260px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: burlywood;
+}
+.footer-boxes{
+    display:flex;
+    justify-content:space-around;
+    padding:20px;
+    border-bottom:2px solid #000;
+}
+.footer-box{
+    width:22%;
+    height:120px;
+    border:2px solid #000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: chocolate;
+}
+.copyright{
+    text-align:center;
+    padding:15px;
+}
+
+@media(max-width:768px){
+    .content{
+        flex-direction:column;
+    }
+    .left,
+    .right{
+        width:100%;
+    }
+    .footer-boxes{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+    .footer-box{
+        width:48%;
+    }
+}
+
+@media(max-width:480px){
+    .header{
+        flex-direction:column;
+        gap:15px;
+    }
+    .menu{
+        width:100%;
+    }
+    .footer-box{
+        width:100%;
+        background: brown;
+    }
+    .banner{
+        height:120px;
+        font-size:18px;
+                background-color: blueviolet;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Logo</div>
+            <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="banner">
+            Banner Section
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <div class="small-box">Box 1</div>
+                <div class="small-box">Box 2</div>
+            </div>
+            <div class="right">
+                Main Content Area
+            </div>
+        </div>
+
+        <div class="footer-boxes">
+            <div class="footer-box">1</div>
+            <div class="footer-box">2</div>
+            <div class="footer-box">3</div>
+            <div class="footer-box">4</div>
+        </div>
+
+        <div class="copyright">
+            © 2026 Your Website Name
+        </div>
+
+    </div>
+</body>
+</html> 
